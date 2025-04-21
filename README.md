@@ -24,6 +24,17 @@ Uploads a CSV file to a target table (`departments`,`jobs` and `hired_employees`
 - Number of inserted records.
 - List of skipped duplicate record IDs.
 
+### `GET /stats/hires-per-quarter-2021`
+Gets hirings in 2021 per quarter for each department and job.
+
+**Returns:**
+- List of deparment-jobs with hirings per quarter, ordered by deparment and job
+
+### `GET /stats/top-departments-hired`
+Gets List of deparments with hires above the mean of employees hirde in 2021
+
+**Returns:**
+- List of deparments with the total amount of hirings, ordered by number of hirings.
 
 ## How to Run
 

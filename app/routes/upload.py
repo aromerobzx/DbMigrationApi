@@ -7,14 +7,6 @@ upload_bp = Blueprint('upload',__name__)
 UPLOAD_FOLDER = 'data'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@upload_bp.route('/upload_test', methods=['GET'])
-def upload_test():
-    return jsonify({'message':'test succeeded'})
-
-@upload_bp.route('/upload_test2/<table_name>', methods=['POST'])
-def upload_test2(table_name):
-    return jsonify({'message':f'test with table: {table_name} succeeded'})
-
 @upload_bp.route('/upload/<table_name>', methods=['POST'])
 def upload_csv(table_name):
     if table_name not in ['departments','jobs','hired_employees']:
