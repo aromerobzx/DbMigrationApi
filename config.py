@@ -1,1 +1,2 @@
-DATABASE_URI = 'sqlite:///migration.db'
+
+DATABASE_URI = 'sqlite:///db/migration.db'

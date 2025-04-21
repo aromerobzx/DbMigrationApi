@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.utils import secure_filename
 import os
-from services.loader import process_csv
+from app.services.loader import process_csv
 
 upload_bp = Blueprint('upload',__name__)
 UPLOAD_FOLDER = 'data'
