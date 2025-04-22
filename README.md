@@ -7,6 +7,7 @@ This API allows uploading historical data from CSV files into a SQL database. Bu
 - Upload CSV files to populate one of the three tables `departments`,`jobs` and `hired_employees`.
 - Batch insert transactions (1-1000 records at a time).
 - Automatic duplicate detection to avoid inserting existing records.
+- It's working with a sqlite db but it could work with any other database service.
 - Clean architecture
 
 ## Endpoints
@@ -56,3 +57,34 @@ python app.py
 - `departments(id, department)`
 - `jobs(id, job)`
 - `hired_employees(id, name, datetime, department_id, job_id)`
+
+## Future Improvements and next steps
+To build a local REST API we used Flask framework but it could be modernized and scaled using public cloud services. Here is a suggestion with AWS Cloud services.
+
+### Api layer
+
+#### Amazon API Gateway
+- To expose the REST API.
+
+#### AWS Lambda
+- To build the backend serverless.
+- To Read csv files in memory
+- To perform batch insertion on database
+
+### Storage
+
+#### Amazon S3
+- to store the csv files.
+
+### Database
+
+#### Amazon RDS
+- PostgreSQL,  MySQL, MariaDB
+
+#### Amazon Aurora Serverless
+- PostgreSQL compatible.
+
+
+
+Below we have the suggested architecture
+![aws architecture diagram](images/aws_architecture_diagram.jpeg)
